@@ -39,10 +39,10 @@
     "postpack": "backstage-cli package postpack"
   },
   "dependencies": {
+    "@backstage-community/plugin-opa-backend": "workspace:^",
     "@backstage/backend-plugin-api": "^1.2.0",
     "@backstage/catalog-model": "^1.7.3",
     "@backstage/plugin-catalog-node": "^1.16.0",
-    "@backstage-community/plugin-opa-backend": "workspace:^",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21"
   },
