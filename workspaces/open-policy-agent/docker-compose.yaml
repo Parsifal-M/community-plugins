@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:15.5-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: devPostgres
+    ports:
+      - 5432:5432
+  opa:
+    image: openpolicyagent/opa:1.0.0-static
+    command:
+      - 'run'
+      - '--server'
+      - '--addr=0.0.0.0:8181'
+      - '--watch'
+      - '--log-format=json-pretty'
+      - '--set=decision_logs.console=true'
+      - '/policies/'
+    ports:
+      - 8181:8181
+    volumes:
+      - ./policies:/policies
