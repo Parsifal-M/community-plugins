@@ -23,7 +23,7 @@ Sadly, not all core and community plugins will work with this library for permis
 Run the yarn install command!
 
 ```bash
-yarn add --cwd packages/app @parsifal-m/backstage-plugin-opa-authz-react
+yarn add --cwd packages/app @backstage-community/backstage-plugin-opa-authz-react
 ```
 
 ### Add the API
@@ -56,11 +56,11 @@ To control and hide a component based on the result of a policy evaluation, you 
 Install the library first to your Backstage plugin:
 
 ```bash
-yarn add @parsifal-m/backstage-plugin-opa-authz-react
+yarn add @backstage-community/backstage-plugin-opa-authz-react
 ```
 
 ```tsx
-import { RequireOpaAuthz } from '@parsifal-m/backstage-plugin-opa-authz-react';
+import { RequireOpaAuthz } from '@backstage-community/backstage-plugin-opa-authz-react';
 
 // Some code...
 
@@ -79,7 +79,7 @@ If you want to use the `useOpaAuthz` hook directly, you can do so:
 
 ```tsx
 import React from 'react';
-import { useOpaAuthz } from '@parsifal-m/backstage-plugin-opa-authz-react';
+import { useOpaAuthz } from '@backstage-community/backstage-plugin-opa-authz-react';
 
 const MyComponent = () => {
   const { loading, data, error } = useOpaAuthz(

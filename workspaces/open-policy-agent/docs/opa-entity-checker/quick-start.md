@@ -109,7 +109,7 @@ data:
 Run the following command to install the OPA Entity Checker plugin in your Backstage project.
 
 ```bash
-yarn add --cwd packages/app @parsifal-m/plugin-opa-entity-checker && yarn add --cwd packages/backend @parsifal-m/plugin-opa-backend
+yarn add --cwd packages/app @backstage-community/plugin-opa-entity-checker && yarn add --cwd packages/backend @backstage-community/plugin-opa-backend
 ```
 
 Then make the following changes to the `packages/backend/src/index.ts` file in your Backstage project.
@@ -121,7 +121,7 @@ const backend = createBackend();
 backend.add(import('@backstage/plugin-app-backend/alpha'));
 backend.add(import('@backstage/plugin-auth-backend'));
 // ..... other plugins
-+ backend.add(import('@parsifal-m/plugin-opa-backend'));
++ backend.add(import('@backstage-community/plugin-opa-backend'));
 ```
 
 ## Add The OPA Entity Checker Plugin To Your Frontend
@@ -132,7 +132,7 @@ Add the following to your `EntityPage.tsx` file:
 import {
   OpaMetadataAnalysisCard,
   hasOPAValidationErrors,
-} from '@parsifal-m/plugin-opa-entity-checker';
+} from '@backstage-community/plugin-opa-entity-checker';
 
 //...
 
@@ -155,7 +155,7 @@ You can also use the compact Card variant as follows. The card is intended to be
 import {
     OpaMetadataAnalysisCard,
     hasOPAValidationErrors,
-} from '@parsifal-m/plugin-opa-entity-checker';
+} from '@backstage-community/plugin-opa-entity-checker';
 
 const entityWarningContent = (
     //...
@@ -192,7 +192,7 @@ opaClient:
 Run the following command to install the OPA Entity Checker Processor in your Backstage project.
 
 ```bash
-yarn add --cwd packages/backend @parsifal-m/backstage-plugin-opa-entity-checker-processor
+yarn add --cwd packages/backend @backstage-community/backstage-plugin-opa-entity-checker-processor
 ```
 
 Then make the following changes to the `packages/backend/src/index.ts` file in your Backstage project.
@@ -204,8 +204,8 @@ const backend = createBackend();
 backend.add(import('@backstage/plugin-app-backend/alpha'));
 backend.add(import('@backstage/plugin-auth-backend'));
 // ..... other plugins
-backend.add(import('@parsifal-m/plugin-opa-backend'));
-+ backend.add(import('@parsifal-m/backstage-plugin-opa-entity-checker-processor'));
+backend.add(import('@backstage-community/plugin-opa-backend'));
++ backend.add(import('@backstage-community/backstage-plugin-opa-entity-checker-processor'));
 ```
 
 ## Recommendations

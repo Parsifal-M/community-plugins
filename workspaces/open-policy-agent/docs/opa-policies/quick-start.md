@@ -11,7 +11,7 @@ This guide will help you get started with the OPA Policies plugin for Backstage.
 Run the following command to install the OPA Backend Plugin in your Backstage project.
 
 ```bash
-yarn add --cwd packages/backend @parsifal-m/plugin-opa-backend && yarn add --cwd packages/app @parsifal-m/plugin-opa-policies
+yarn add --cwd packages/backend @backstage-community/plugin-opa-backend && yarn add --cwd packages/app @backstage-community/plugin-opa-policies
 ```
 
 Then make the following changes to the `packages/backend/src/index.ts` file in your Backstage project.
@@ -23,7 +23,7 @@ const backend = createBackend();
 backend.add(import('@backstage/plugin-app-backend/alpha'));
 backend.add(import('@backstage/plugin-auth-backend'));
 // ..... other plugins
-+ backend.add(import('@parsifal-m/plugin-opa-backend'));
++ backend.add(import('@backstage-community/plugin-opa-backend'));
 ```
 
 ## Add The OPA Policies Plugin To Your Frontend
@@ -34,7 +34,7 @@ You can then add it to your entity pages in `packages/app/src/components/catalog
 import {
   OpaPolicyPage,
   isOpaPoliciesEnabled,
-} from '@parsifal-m/plugin-opa-policies';
+} from '@backstage-community/plugin-opa-policies';
 
 const websiteEntityPage = (
   <EntityLayout>

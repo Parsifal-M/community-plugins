@@ -13,7 +13,7 @@ If you are using this plugin and want to know how to use it in local development
 Run the following command to install the OPA Entity Checker plugin in your Backstage project.
 
 ```bash
-yarn add --cwd packages/app @parsifal-m/plugin-opa-entity-checker && yarn add --cwd packages/backend @parsifal-m/plugin-opa-backend
+yarn add --cwd packages/app @backstage-community/plugin-opa-entity-checker && yarn add --cwd packages/backend @backstage-community/plugin-opa-backend
 ```
 
 Then make the following changes to the `packages/backend/src/index.ts` file in your Backstage project.
@@ -25,7 +25,7 @@ const backend = createBackend();
 backend.add(import('@backstage/plugin-app-backend/alpha'));
 backend.add(import('@backstage/plugin-auth-backend'));
 // ..... other plugins
-+ backend.add(import('@parsifal-m/plugin-opa-backend'));
++ backend.add(import('@backstage-community/plugin-opa-backend'));
 ```
 
 ## Add The OPA Entity Checker Plugin To Your Frontend
@@ -33,7 +33,7 @@ backend.add(import('@backstage/plugin-auth-backend'));
 Add the following to your `EntityPage.tsx` file:
 
 ```tsx
-import { OpaMetadataAnalysisCard } from '@parsifal-m/plugin-opa-entity-checker';
+import { OpaMetadataAnalysisCard } from '@backstage-community/plugin-opa-entity-checker';
 
 //...
 

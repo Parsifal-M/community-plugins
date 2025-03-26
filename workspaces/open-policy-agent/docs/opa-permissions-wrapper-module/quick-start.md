@@ -94,7 +94,7 @@ data:
 Run the following command to install the OPA Permissions Wrapper Module in your Backstage project.
 
 ```bash
-yarn add --cwd packages/backend @parsifal-m/plugin-permission-backend-module-opa-wrapper
+yarn add --cwd packages/backend @backstage-community/plugin-permission-backend-module-opa-wrapper
 ```
 
 Then make the following changes to the `packages/backend/src/index.ts` file in your Backstage project.
@@ -106,7 +106,7 @@ const backend = createBackend();
 backend.add(import('@backstage/plugin-app-backend/alpha'));
 backend.add(import('@backstage/plugin-auth-backend'));
 // ..... other plugins
-+ backend.add(import('@parsifal-m/plugin-permission-backend-module-opa-wrapper'));
++ backend.add(import('@backstage-community/plugin-permission-backend-module-opa-wrapper'));
 ```
 
 ## Configuration
